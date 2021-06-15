@@ -1,0 +1,1506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>handler</class>
+ <widget class="QMainWindow" name="handler">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QFrame#main_frame {
+background-color: rgb(73, 52, 127);
+
+}
+
+QFrame#topMenu {
+background-color:rgba(17, 0, 52, 150);
+border-bottom:2px solid rgb(0, 0, 0);
+}
+
+QLabel#seller{
+color: rgb(255, 255, 255);
+}
+
+QFrame#leftMenu {
+background-color:rgb(17, 0, 52);
+border-right:2px solid#000
+}
+
+QFrame#rightMenu {
+background-color:rgb(17, 0, 52);
+border-left:2px solid#000
+}
+
+QLabel#version{
+color: rgba(132, 132, 132, 100);
+}
+
+QLabel#appName{
+color: rgb(255, 255, 255);
+}
+
+QPushButton#btnAdd{
+background-color:rgba(94, 62, 127, 200);
+border-top-left-radius:11px;
+border-bottom-left-radius:11px;
+
+}
+
+QPushButton:hover#btnAdd{
+background-color:rgb(119, 78, 170);
+}
+
+QPushButton:pressed#btnAdd{
+background-color:rgb(63, 41, 90);
+}
+
+QPushButton#btnSell{
+background-color:rgba(94, 62, 127, 200);
+border-top-right-radius:11px;
+border-bottom-right-radius:11px;
+}
+
+QPushButton:hover#btnSell{
+background-color:rgb(119, 78, 170);
+}
+
+QPushButton:pressed#btnSell{
+background-color:rgb(63, 41, 90);
+}
+
+QPushButton#btnClose{
+background-color:transparent;
+}
+
+QPushButton:hover#btnClose{
+border:2px solid rgb(255, 0, 0);
+border-radius:10px
+}
+
+QPushButton:pressed#btnClose{
+border:2px solid rgb(95, 0, 0);
+}
+
+QPushButton#btnRefresh{
+background-color:transparent;
+}
+
+QPushButton:hover#btnRefresh{
+border:2px solid rgb(95, 211, 141);
+border-radius:11px
+}
+
+QPushButton:pressed#btnRefresh{
+border:3px solid rgb(58, 130, 86);
+}
+
+
+QLabel#labelStatistic{
+color: rgb(255, 255, 255);
+	background-color: rgba(255, 255, 255, 100);
+}
+
+QLabel#labelLeft{
+background-color: rgba(170, 255, 0,70);
+color:rgb(170, 255, 0);
+}
+
+QLabel:hover#labelLeft{
+color:rgba(170, 255, 0, 180);
+}
+
+QLabel#labelSold{
+color:rgb(170, 255, 0);
+}
+
+QLabel:hover#labelSold{
+color:rgba(170, 255, 0, 180);
+}
+
+QLabel#labelLastSale{
+color:rgb(170, 255, 0);
+background-color: rgba(170, 255, 0,70);
+}
+
+QLabel:hover#labelLastSale{
+color:rgba(170, 255, 0, 180);
+}
+
+QLabel#enterLink{
+color:rgb(170, 255, 0);
+}
+
+QLabel:hover#enterLink{
+color:rgba(170, 255, 0, 180);
+}
+
+QLineEdit#linkLine{
+color: rgb(195, 255, 125);
+	background-color:rgba(194, 255, 124,100);
+border:2px solid rgb(168, 239, 60);
+border-radius:10px;
+}
+
+QLineEdit:focus#linkLine{
+border:3px solid rgb(110, 255, 14);
+}
+
+QLineEdit:hover#linkLine{
+border:3px solid rgb(110, 255, 14);
+}
+
+
+QPushButton#btnAddToDB{
+color:rgb(195, 255, 125);
+	background-color: rgb(78, 49, 111);
+border:2px solid rgb(38, 24, 54);
+border-radius: 20px;
+
+}
+
+QPushButton:hover#btnAddToDB{
+background-color:rgb(119, 78, 170);
+}
+
+QPushButton:pressed#btnAddToDB{
+border:3px solid rgb(70, 44, 100);
+background-color:rgb(35, 22, 50);
+}
+
+QLabel#successMsg{
+	background-color: rgba(0, 255, 0, 150);
+	border-top-right-radius:20px;
+	border-top-left-radius:20px;
+}
+
+QLabel:hover#successMsg{
+color: rgb(127, 247, 137);
+}
+
+
+QLabel#unsuccessMsg{
+	background-color: rgba(255, 0, 0, 150);
+	border-top-right-radius:20px;
+	border-top-left-radius:20px;
+}
+
+QLabel:hover#unsuccessMsg{
+color: rgb(197, 78, 74);
+}
+
+QLabel#labelLogin{
+color:rgb(170, 255, 0);
+}
+
+QLabel:hover#labelLogin{
+color:rgba(170, 255, 0, 180);
+}
+
+
+QLabel#labelPass{
+color:rgb(170, 255, 0);
+}
+
+QLabel:hover#labelPass{
+color:rgba(170, 255, 0, 180);
+}
+
+QLineEdit#loginLine{
+color: rgb(195, 255, 125);
+	background-color:rgba(194, 255, 124,100);
+border:2px solid rgb(168, 239, 60);
+border-radius:11px;
+
+}
+
+QLineEdit:hover#loginLine{
+border:3px solid rgb(110, 255, 14);
+}
+
+QLineEdit:focus#loginLine{
+border:3px solid rgb(110, 255, 14);
+}
+
+
+QLineEdit#passLine{
+color: rgb(195, 255, 125);
+	background-color:rgba(194, 255, 124,100);
+border:2px solid rgb(168, 239, 60);
+border-radius:11px;
+
+}
+
+QLineEdit:hover#passLine{
+border:3px solid rgb(110, 255, 14);
+}
+
+QLineEdit:focus#passLine{
+border:3px solid rgb(110, 255, 14);
+}
+
+
+QLabel#rtrn_passLabel{
+color:rgb(170, 255, 0);
+}
+
+QLabel:hover#rtrn_passLabel{
+color:rgba(170, 255, 0, 180);
+}
+
+QLabel#rtrn_linkLabel{
+color:rgb(170, 255, 0);
+}
+
+QLabel:hover#rtrn_linkLabel{
+color:rgba(170, 255, 0, 180);
+}
+
+QLabel#rtrn_loginLabel{
+color:rgb(170, 255, 0);
+}
+
+QLabel:hover#rtrn_loginLabel{
+color:rgba(170, 255, 0, 180);
+}
+
+QLineEdit#rtrn_pass{
+color: rgb(0, 170, 0);
+	background-color:rgba(194, 255, 124,100);
+border:2px solid rgb(168, 239, 60);
+border-radius:8px;
+
+}
+
+QLineEdit:hover#rtrn_pass{
+background-color:rgba(194, 255, 124,60)
+}
+
+QLineEdit#rtrn_login{
+color: rgb(0, 170, 0);
+	background-color:rgba(194, 255, 124,100);
+border:2px solid rgb(168, 239, 60);
+border-radius:8px;
+
+}
+
+QLineEdit:hover#rtrn_login{
+background-color:rgba(194, 255, 124,60)
+}
+
+QLineEdit#rtrn_link{
+color: rgb(0, 170, 0);
+	background-color:rgba(194, 255, 124,100);
+border:2px solid rgb(168, 239, 60);
+border-radius:8px;
+
+}
+
+QLineEdit:hover#rtrn_link{
+background-color:rgba(194, 255, 124,60)
+}
+
+QPushButton#btn_req{
+color:rgb(195, 255, 125);
+	background-color: rgb(78, 49, 111);
+border:2px solid rgb(38, 24, 54);
+border-radius: 14px
+}
+
+QPushButton:hover#btn_req{
+background-color:rgb(119, 78, 170)
+}
+
+QPushButton:pressed#btn_req{
+border:3px solid rgb(70, 44, 100);
+background-color:rgb(35, 22, 50);
+}
+
+QLineEdit#levelLine{
+color: rgb(0, 170, 0);
+	background-color:rgba(194, 255, 124,100);
+border:2px solid rgb(168, 239, 60);
+border-radius:8px;
+
+}
+
+QLineEdit:hover#levelLine{
+background-color:rgba(194, 255, 124,60)
+}
+
+QLineEdit#gamesLine{
+color: rgb(0, 170, 0);
+	background-color:rgba(194, 255, 124,100);
+border:2px solid rgb(168, 239, 60);
+border-radius:8px;
+
+}
+
+QLineEdit:hover#gamesLine{
+background-color:rgba(194, 255, 124,60)
+}
+
+QLabel#level{
+color:rgb(170, 255, 0);
+
+}
+
+QLabel:hover#level{
+color:rgba(170, 255, 0, 180);
+
+}
+
+QLabel#games_count{
+color:rgb(170, 255, 0);
+
+}
+
+QLabel:hover#games_count{
+color:rgba(170, 255, 0, 180);
+
+}
+
+
+QPushButton#btn_clear{
+color:rgb(195, 255, 125);
+	background-color: rgb(78, 49, 111);
+border:2px solid rgb(38, 24, 54);
+border-radius: 7px
+}
+
+QPushButton:hover#btn_clear{
+background-color:rgb(119, 78, 170)
+}
+
+QPushButton:pressed#btn_clear{
+border:3px solid rgb(70, 44, 100);
+background-color:rgb(35, 22, 50);
+}
+
+
+QLabel#error_msg{
+background-color: rgb(255, 0, 0);
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+}
+
+QLabel#pls_wait_msg{
+color: rgb(195, 255, 125);
+}
+
+QLabel:hover#pls_wait_msg{
+color: rgba(195, 255, 125, 150);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</string>
+   </property>
+   <widget class="QFrame" name="main_frame">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>15</y>
+      <width>770</width>
+      <height>570</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="topMenu">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>771</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="seller">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>0</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>3</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe UI</family>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>LOGIN</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <property name="indent">
+       <number>0</number>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::NoTextInteraction</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnClose">
+      <property name="geometry">
+       <rect>
+        <x>748</x>
+        <y>2</y>
+        <width>20</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/close_app_icon.png</normaloff>icons/close_app_icon.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>28</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnRefresh">
+      <property name="geometry">
+       <rect>
+        <x>727</x>
+        <y>1</y>
+        <width>22</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icons/rfrsh_logo.png</normaloff>icons/rfrsh_logo.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>18</width>
+        <height>18</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="version">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>70</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Nirmala UI</family>
+        <pointsize>8</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>version: 0.0.1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="appName">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>4</y>
+        <width>160</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;strong&gt;ACCOUNT &lt;/strong&gt; HANDLER</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="labelStatistic">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>70</y>
+       <width>691</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>20</pointsize>
+       <weight>50</weight>
+       <italic>true</italic>
+       <bold>false</bold>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:28pt; font-weight:600;&quot;&gt;info&lt;/span&gt;&lt;span style=&quot; font-size:28pt;&quot;&gt;:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>13</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelLeft">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>140</y>
+       <width>691</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Accounts left:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <property name="margin">
+      <number>11</number>
+     </property>
+     <property name="indent">
+      <number>30</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelSold">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>145</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Accounts sold:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelLastSale">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>230</y>
+       <width>691</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Last sale was at:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="rightMenu">
+    <property name="geometry">
+     <rect>
+      <x>745</x>
+      <y>65</y>
+      <width>40</width>
+      <height>520</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="rtrn_linkLabel">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>70</y>
+       <width>100</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>12</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>link</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="rtrn_loginLabel">
+     <property name="geometry">
+      <rect>
+       <x>191</x>
+       <y>142</y>
+       <width>100</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>12</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>login</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="rtrn_passLabel">
+     <property name="geometry">
+      <rect>
+       <x>186</x>
+       <y>220</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>12</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>password</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_req">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>450</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>REQUEST</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="rtrn_pass">
+     <property name="geometry">
+      <rect>
+       <x>177</x>
+       <y>260</y>
+       <width>130</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="rtrn_login">
+     <property name="geometry">
+      <rect>
+       <x>177</x>
+       <y>170</y>
+       <width>130</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="rtrn_link">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>100</y>
+       <width>531</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="dayz_logo">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>304</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>icons/dayz_logo.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="rust_logo">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>297</y>
+       <width>40</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>icons/rust_logo.jpg</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pubg_logo">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>300</y>
+       <width>65</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>icons/pubg_logo.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="r6_logo">
+     <property name="geometry">
+      <rect>
+       <x>365</x>
+       <y>293</y>
+       <width>54</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>icons/r6_logo.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="csgo_logo">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>298</y>
+       <width>45</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>icons/csgo_logo.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="vac_logo">
+     <property name="geometry">
+      <rect>
+       <x>515</x>
+       <y>297</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>icons/vac_logo.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="levelLine">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>170</y>
+       <width>130</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="gamesLine">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>260</y>
+       <width>130</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="level">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>150</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>12</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>level</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="games_count">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>230</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>12</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>games</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="PyToggle" name="dayz_check" native="true">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>340</y>
+       <width>61</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="PyToggle" name="rust_check" native="true">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>340</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="PyToggle" name="pubg_check" native="true">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>340</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="PyToggle" name="r6_check" native="true">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>340</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="PyToggle" name="csgo_check" native="true">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>350</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="PyToggle" name="vac_check" native="true">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>350</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_clear">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>470</y>
+       <width>51</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>7</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>CLEAR</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="error_msg">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>0</y>
+       <width>400</width>
+       <height>0</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic Medium</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::DefaultContextMenu</enum>
+     </property>
+     <property name="toolTipDuration">
+      <number>-1</number>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>&lt;strong&gt;ERROR&lt;/strong&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnSell">
+    <property name="geometry">
+     <rect>
+      <x>745</x>
+      <y>85</y>
+      <width>40</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe Print</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>SELL</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="leftMenu">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>65</y>
+      <width>40</width>
+      <height>520</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="btnAdd">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>40</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>ADD</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="linkLine">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>130</y>
+       <width>561</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLabel" name="enterLink">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>90</y>
+       <width>291</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>14</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>Enter link</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnAddToDB">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>340</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>ADD TO DATA BASE</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="successMsg">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>520</y>
+       <width>510</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>16</pointsize>
+       <italic>true</italic>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Account was successfully added to data base!</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="unsuccessMsg">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>520</y>
+       <width>421</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>16</pointsize>
+       <italic>false</italic>
+       <underline>true</underline>
+      </font>
+     </property>
+     <property name="text">
+      <string>Account wasn't added to data base!</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="loginLine">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>200</y>
+       <width>180</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="passLine">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>266</y>
+       <width>180</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelLogin">
+     <property name="geometry">
+      <rect>
+       <x>326</x>
+       <y>165</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>14</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>login</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelPass">
+     <property name="geometry">
+      <rect>
+       <x>324</x>
+       <y>233</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>14</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>password</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="pls_wait_msg">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>380</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe Print</family>
+       <pointsize>10</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Please, wait...</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <zorder>main_frame</zorder>
+   <zorder>rightMenu</zorder>
+   <zorder>leftMenu</zorder>
+   <zorder>btnSell</zorder>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PyToggle</class>
+   <extends>QWidget</extends>
+   <header>pytoggle.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
